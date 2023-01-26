@@ -16,14 +16,13 @@ public class Demo {
 		
 		Supplier<Date> date=()->new Date();
 		System.out.println("date: "+date.get());
-		//Scanner sc=new Scanner(System.in);
-		//System.out.println("enter string:");
-		//StringBuffer sb=new StringBuffer();
-		//sb.append(sc.next());
-		Function<Integer, Integer> add=x->x;
-		add.apply((int)10);
-	//	Function<StringBuffer, StringBuffer> reverse=s->s.reverse();
-	//	System.out.println(reverse.apply(sb));
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter string:");
+		StringBuffer sb=new StringBuffer();
+		sb.append(sc.next());
+		
+	Function<StringBuffer, StringBuffer> reverse=s->s.reverse();
+		System.out.println(reverse.apply(sb));
 		MyInterface mi=x->System.out.println(x);
 		mi.method(10);
 		Demo dm=new Demo();
